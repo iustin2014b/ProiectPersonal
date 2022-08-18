@@ -9,14 +9,14 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using UpFile2;
-using static ImageWebApi.Controllers.UploadController;
+//using static ImageWebApi.Controllers.UploadController;
 using IHostingEnvironment = Microsoft.AspNetCore.Hosting.IHostingEnvironment;
 using System.Diagnostics;
 using Model;
 using Microsoft.Win32;
 using System.Xml.Linq;
 
-namespace ImageWebApi.Controllers
+namespace ImageWebApi.Controllers.Hub
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -85,7 +85,7 @@ namespace ImageWebApi.Controllers
                         Email = register.Email,
                         Password = register.Password,
                         Name = register.Name,
-                       TimeConn = DateTime.Now,
+                        TimeConn = DateTime.Now,
                        Connect = 0
 
                 };
@@ -183,7 +183,7 @@ namespace ImageWebApi.Controllers
             return Ok("");
         }
 
-       
+      
 
     
     // [HttpGet]
