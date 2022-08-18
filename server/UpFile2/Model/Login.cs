@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Model
 {
     public class UsersLoginClient {
+        public int IdUser { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
         public string Name { get; set; }
@@ -18,7 +19,8 @@ namespace Model
     }
    
     public class UsersLoginDB {
-        public int Id { get; set; }
+        [Key]
+        public int IdUser { get; set; }
  
         public string Email { get; set; }
 
